@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ada Pertanyaan Buat Kamu</title>
+  <title>Pertanyaan Buat Kamu</title>
   <style>
     body {
       margin: 0;
@@ -23,7 +23,7 @@
       margin-bottom: 30px;
       padding: 0 20px;
     }
-    .btn {
+    button {
       display: block;
       width: 200px;
       margin: 15px auto;
@@ -33,26 +33,28 @@
       background: #f8b500;
       border: none;
       border-radius: 30px;
-      text-decoration: none;
       transition: 0.3s;
+      cursor: pointer;
     }
-    .btn:hover {
+    button:hover {
       background: #e09500;
     }
-    .btn.no {
+    .no {
       background: #ff4e4e;
     }
-    .btn.no:hover {
+    .no:hover {
       background: #cc0000;
     }
   </style>
 </head>
 <body>
 
-  <h1>Maukah kamu jadi seseorang yang spesial buat aku?😳❤️</h1>
+  <h1>Maukah kamu jadi seseorang yang spesial buat aku? 😳❤️</h1>
 
-  <a href="" class="btn">Iya</a>
-  <a href="" class="btn no">Tidak</a>
-  
+  <form name="pilihan" method="POST" data-netlify="true">
+    <button type="submit" name="jawaban" value="Iya">Iya</button>
+    <button type="submit" name="jawaban" value="Tidak" class="no">Tidak</button>
+  </form>
+
 </body>
 </html>
