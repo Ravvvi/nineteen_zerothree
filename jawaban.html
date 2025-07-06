@@ -23,47 +23,45 @@
       margin-bottom: 30px;
       padding: 0 20px;
     }
-    button {
+    a {
       display: block;
-      width: 200px;
-      margin: 15px auto;
-      padding: 14px;
-      font-size: 20px;
-      color: #fff;
-      background: #f8b500;
-      border: none;
-      border-radius: 30px;
-      transition: 0.3s;
+      font-size: 24px;
+      margin: 20px;
+      text-decoration: underline;
       cursor: pointer;
     }
-    button:hover {
-      background: #e09500;
+    .iya {
+      color: #2ecc71; /* warna hijau */
     }
-    .no {
-      background: #ff4e4e;
+    .iya:hover {
+      color: #27ae60;
     }
-    .no:hover {
-      background: #cc0000;
+    .tidak {
+      color: #ff4e4e; /* warna merah */
+    }
+    .tidak:hover {
+      color: #cc0000;
     }
   </style>
 </head>
 <body>
 
-  <h1>Maukah kamu jadi seseorang yang spesial buat aku?</h1>
+  <h1>Would you like to be someone special for mee?</h1>
 
-  <!-- Form pilihan Iya -->
-  <form name="pilihan" method="POST" data-netlify="true" action="/terimakasih.html">
+  <!-- Form Iya -->
+  <form id="formIya" name="pilihan" method="POST" data-netlify="true" action="terimakasih.html" hidden>
     <input type="hidden" name="form-name" value="pilihan">
     <input type="hidden" name="jawaban" value="Iya">
-    <button type="submit">Iya</button>
   </form>
 
-  <!-- Form pilihan Tidak -->
-  <form name="pilihan" method="POST" data-netlify="true" action="/terimakasih.html">
+  <!-- Form Tidak -->
+  <form id="formTidak" name="pilihan" method="POST" data-netlify="true" action="terimakasih.html" hidden>
     <input type="hidden" name="form-name" value="pilihan">
     <input type="hidden" name="jawaban" value="Tidak">
-    <button type="submit" class="no">Iya</button>
   </form>
+
+  <a class="iya" onclick="document.getElementById('formIya').submit()">Iya</a>
+  <a class="tidak" onclick="document.getElementById('formTidak').submit()">Tidak</a>
 
 </body>
 </html>
